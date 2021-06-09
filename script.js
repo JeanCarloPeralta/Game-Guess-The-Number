@@ -14,7 +14,7 @@ function checkGuess(){
     let userGuess = Number(guessField.value);
     if (userGuess === randomNumber){
         lastResult.textContent = 'Felicidades lo adivinaste';
-        lastResult.Style.backgroundColor = 'green';
+        lastResult.style.backgroundColor = 'green';
         lowOrHi.textContent = '';
 
     } else if (guessCount === 10) {
@@ -22,7 +22,7 @@ function checkGuess(){
 
     }else{
         lastResult.textContent = 'Wrong!';
-        lastResult.Style.backgroundColor = 'Red'
+        lastResult.style.backgroundColor = 'red'
     }
 
     if (userGuess < randomNumber){
@@ -64,7 +64,7 @@ function setGameOver(){
     guessField.value = '';
     guessField.focus();
 
-    lastResult.Style.backgroundColor = 'white';
+    lastResult.style.backgroundColor = 'white';
 
     randomNumber = Math.floor(Math.random() * 100) + 1;
 }
